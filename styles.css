@@ -1,0 +1,379 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Kanit, poppins;
+}
+
+/* Container */
+.hero {
+    width: 100%;
+    min-height: 100vh;
+    background-image: url('bg.jpg');
+    background-position: center;
+    background-size: cover;
+    padding: 10px 10%;
+    overflow: hidden;
+    position: relative;
+
+}
+.logo {
+color: #da1a32;
+font-weight: bold;
+font-size: 32px;
+text-transform: uppercase;
+text-decoration: none;
+}
+
+.logo:hover {
+    color: #000000; 
+}
+
+/* Navigation */
+nav {
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    z-index: 10;
+}
+
+nav a:hover {
+    background-color: #ddd;
+}
+
+nav ul li {
+    display: inline-block;
+    list-style: none;
+    margin: 10px 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: black;
+    font-weight: 400;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown > a {
+    display: block;
+    padding: 10px 15px;
+    color: #333;
+    text-decoration: none;
+    background-color: #f1f1f1;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.dropdown > a:hover {
+    background-color: #ddd;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #fff;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    min-width: 180px;
+    z-index: 1;
+}
+
+.dropdown-content > li {
+    list-style: none;
+}
+
+.dropdown-content > li > a {
+    padding: 12px 20px;
+    color: #333;
+    text-decoration: none;
+    display: block;
+    transition: background-color 0.3s ease;
+}
+
+.dropdown-content > li > a:hover {
+    background-color: #f0f0f0;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Button Styling */
+.btn {
+    display: inline-block;
+    background-color: #da1a32;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #000000;
+    transform: scale(1.05);
+}
+
+.btn:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.6);
+}
+
+/* Content Styling */
+.content { 
+    margin-top: 10%;
+    max-width: 600px;
+}
+
+.content h1 {
+    font-size: 70px;
+    color: #da1a32;
+}
+
+.content p {
+    margin: 10px 0 30px;
+    color: #000000;
+}
+
+.feature-img {
+    position: absolute;
+    right: 28%;  
+    top: 40%;
+    transform: translateY(-50%) scale(2.0);
+    max-width: 100%;
+    height: auto;
+    z-index: 1;
+    object-fit: contain;
+}
+
+/* Gallery */
+
+.gallery {
+display: flex;
+height: 20rem;
+gap: 1rem;
+overflow: hidden;
+}
+
+.gallery > div {
+flex: 1;
+border-radius: 1rem;
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+transition: all .8s cubic-bezier(.25, .4, .45, 1.4);
+}
+
+.gallery > div:hover {
+flex: 5;
+transform: scale(1.05);
+}
+
+.gallery > div::before {
+content: '';
+position: absolute;
+top: 0;
+left: 0
+right: 0;
+bottom: 0;
+background: rgba(0,0,0,0.1);
+border-radius: 1rem;
+transition: background 0.3s ease;
+}
+
+.feed {
+position: absolute;
+bottom: 0;
+left: 0;
+width: 100%;
+padding: 0.5rem;
+background: rgba(0,0,0,0.7);
+color: #fff;
+font-size: 1rem;
+text-align: center;
+opacity: 0;
+transition: opacity 0.3s;
+}
+
+.gallery >div:hover .feed {
+opacity: 1;
+}
+
+.bportion {
+text-align: center;
+padding: 40px;
+margin-top: 20px;
+font-style: italic;
+}
+
+.bportion h1 {
+font-size: 2rem;
+color: #333;
+margin-bottom: 20px;
+}
+
+.services {
+    padding: 60px 20px;
+    background-color: rgba(249, 249, 249, 0.9);
+    text-align: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+}
+
+
+.services h2 {
+    font-size: 42px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.services p {
+    font-size: 20px;
+    color: #777;
+    margin-bottom: 40px;
+    line-height: 1.6;
+}
+
+
+.service-container {
+    display: flex;
+    justify-content: space-around;
+    gap: 30px;
+    flex-wrap: wrap;
+    padding-top: 20px;
+}
+
+
+.service {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    width: 280px;
+    padding: 30px;
+    text-align: center;
+    transition: all 0.3s ease;
+    position: relative;
+    z-index: 1;
+}
+
+
+.service:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+.service img {
+    width: 100%;
+    max-height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+
+.service h3 {
+    font-size: 24px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+
+.service p {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+
+.service a {
+    text-decoration: none;
+    font-size: 16px;
+    color: #da1a32;  
+    font-weight: 500;
+    border: 2px solid #000000;
+    padding: 10px 20px;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+}
+
+.service a:hover {
+    background-color: #000000;
+    color: white;
+    border-color: #da1a32;
+}
+
+#contact {
+    padding: 2rem;
+}
+
+#contact h2 {
+    color: #da1a32;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+#contact p {
+    color: #666;
+    font-size: 1rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+address {
+    color: #666;
+    font-size: 1rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+form label {
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+form button {
+    background-color: #da1a32;
+    color: white;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #000000;
+}
+
